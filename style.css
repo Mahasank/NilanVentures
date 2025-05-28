@@ -1,0 +1,483 @@
+/* Global Base Styles */
+body {
+	font-family: "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Arial", sans-serif;
+	font-weight: bold;
+	color: black;
+	margin-bottom: 0.6em;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.5em; }
+
+p, label, li, input, textarea, button {
+	font-family: "Arial", sans-serif;
+	font-size: 1.1em;
+	color: #333;
+}
+
+button {
+	padding: 0.6em 0.95em;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}
+
+/* Header Styles */
+header {
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.9em 1.25em;
+}
+
+.logo {
+	margin: 0.5em 0 0.7em;
+	text-align: center;
+}
+
+.logo img {
+	height: 70px;
+	display: block;
+	margin: 0 auto;
+}
+
+.menu-toggle {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	margin-top: 0.5em;
+}
+
+.bar {
+	height: 3px;
+	width: 25px;
+	background-color: black;
+	margin: 3px 0;
+}
+
+.nav {
+	width: 100%;
+}
+
+.nav ul {
+	list-style-type: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav ul li {
+	margin: 0.6em;
+	font-size: 1em;
+}
+
+.nav ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+.nav ul li a.appointment-button {
+	color: white;
+}
+
+.appointment-bg {
+	background-color: black;
+	padding: 0.6em 0.9em;
+	border-radius: 0.3em;
+	display: none;
+}
+
+/* Hero and Main Content */
+main {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.hero-image {
+	width: 100%;
+}
+
+.hero-image img {
+	width: 100%;
+	height: auto;
+}
+
+.text-box {
+	width: 85%;
+	text-align: left;
+}
+
+.card-container {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px auto;
+	width: 90%;
+}
+
+.card {
+	width: 30%;
+	position: relative;
+}
+
+.card-inner {
+	position: relative;
+	width: 100%;
+	height: 350px;
+}
+
+.card-front {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-image {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.6s ease;
+}
+
+.card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.9);
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 0.6s ease;
+}
+
+.card-inner:hover .card-image {
+	opacity: 0;
+}
+
+.card-inner:hover .card-back {
+	opacity: 1;
+}
+
+.card-back-text {
+	margin: 1.25em;
+}
+
+/* Footer */
+footer {
+	background: #fff;
+	padding: 0.6em 1.25em;
+	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+footer nav ul li {
+	margin: 0 0.9em;
+}
+
+footer nav ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+/* Market Research */
+.subheading {
+	text-align: left;
+	font-style: italic;
+	margin: 1em 0;
+	color: rgb(78, 78, 78);
+}
+
+.market-research-title {
+	margin-bottom: 1em;
+}
+
+/* Contact Form */
+form {
+	max-width: 90%;
+	margin: 0 auto 5em;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.6em;
+}
+
+input,
+textarea {
+	width: 95%;
+	padding: 0.6em;
+	margin-bottom: 1.5em;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.contact-title {
+	margin-left: 5%;
+}
+
+/* About Us Page */
+.about-section,
+.team-section {
+	width: 85%;
+	margin: 2em auto;
+	padding: 1.5em;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 2px 6px lightgray;
+}
+
+.about-section h1,
+.team-section h2 {
+	text-align: left;
+}
+
+.about-section p,
+.team-section p {
+	line-height: 1.6;
+	margin-bottom: 1.2em;
+}
+
+/* IP Consulting Page */
+.ip-title {
+	text-align: left;
+	width: 85%;
+	margin: 2em auto 1em;
+	font-size: 2em;
+	font-weight: bold;
+	color: black;
+}
+
+.service-cards-container {
+	width: 85%;
+	margin: 0 auto 2em auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2em;
+}
+
+.service-card {
+	width: 280px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	text-align: center;
+	transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+	transform: translateY(-5px);
+}
+
+.service-card img {
+	width: 100%;
+	height: auto;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.service-card p {
+	padding: 1em;
+}
+
+/* Food Distribution Page */
+.food-distribution-title {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: left;
+	color: black;
+	width: 85%;
+	margin: 2em auto 1em;
+}
+
+.food-distribution-content {
+	width: 85%;
+	margin: 0 auto 2em auto;
+	padding: 2em;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.food-distribution-content p {
+	margin-bottom: 1.2em;
+}
+
+.food-distribution-image {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+	border-radius: 10px;
+	margin-bottom: 1em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.menu-toggle {
+		display: flex;
+	}
+
+	.nav {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 3.7em;
+		left: 0;
+		width: 100%;
+		background: white;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	}
+
+	.nav.active {
+		display: flex;
+	}
+
+	.nav ul {
+		flex-direction: column;
+	}
+
+	.nav ul li {
+		margin: 0.6em 0;
+	}
+
+	.hero-image {
+		margin-bottom: 3em;
+	}
+
+	.card-container {
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+	}
+
+	.card {
+		width: 80%;
+		margin-bottom: 1.25em;
+	}
+
+	footer nav ul {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	footer nav ul li {
+		margin: 0.3em 0;
+	}
+
+	.about-section,
+	.team-section,
+	.service-cards-container,
+	.food-distribution-content {
+		width: 90%;
+		padding: 1em;
+	}
+
+	.ip-title,
+	.food-distribution-title {
+		font-size: 1.5em;
+		width: 90%;
+		margin: 1.5em auto 1em;
+	}
+
+	.service-card {
+		width: 100%;
+	}
+}
+
+@media (min-width: 769px) {
+	header {
+		flex-direction: column;
+		align-items: center;
+		padding: 0.9em 1.25em;
+	}
+
+	.appointment-bg {
+		display: inline;
+	}
+
+	.card-container {
+		flex-direction: row;
+		width: 80%;
+	}
+
+	h1 {
+		margin-left: 10%;
+	}
+
+	.card {
+		width: 30%;
+		margin-top: 3em;
+		margin-bottom: 5em;
+	}
+
+	.text-box {
+		width: 85%;
+		margin-left: 10%;
+	}
+
+	.hero-image {
+		width: 80%;
+		margin: auto;
+	}
+
+	.nav {
+		justify-content: space-between;
+	}
+
+	.logo {
+		width: 100%;
+	}
+
+	.contact-title {
+		width: 100%;
+		margin-left: 20%;
+	}
+
+	form {
+		max-width: 60%;
+		margin: 0 auto 5%;
+	}
+
+	.subheading,
+	.offerings-title,
+	.key-offerings {
+		margin-left: 10%;
+	}
+
+	.key-offerings {
+		margin-bottom: 5%;
+	}
+}
